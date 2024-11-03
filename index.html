@@ -2,17 +2,82 @@
 <html lang="he">
 <head>
     <meta charset="UTF-8">
-    <title>אישור הצטרפות לווטסאפ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אישור הצטרפות לקבוצת ווטסאפ</title>
+    <style>
+        /* רקע דינמי */
+        body {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* תיבת תוכן */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+        }
+
+        /* כותרת */
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* כפתור */
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #66a6ff;
+            background-color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* אנימציה פשוטה */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .container {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-    <h1>ברוכים הבאים!</h1>
-    <p>להצטרפות לקבוצה, יש לקבל אישור מהמנהל.</p>
-    <button id="approveButton" onclick="approve()">אישור מנהל</button>
+    <div class="container">
+        <h1>ברוכים הבאים!</h1>
+        <p>להצטרפות לקבוצת הווטסאפ שלנו, יש לקבל אישור מהמנהל.</p>
+        <button class="button" onclick="approve()">אישור מנהל</button>
+    </div>
 
     <script>
         function approve() {
             // לינק לקבוצת ווטסאפ
-            const whatsappLink = "https://chat.whatsapp.com/BCuQA4UZQqoHrM7GQ5nlsT"; // החלף בקישור לקבוצה
+            const whatsappLink = "https://chat.whatsapp.com/XXXXX"; // החלף בקישור לקבוצה שלך
             // ניתוב למשתמש
             window.location.href = whatsappLink;
         }
